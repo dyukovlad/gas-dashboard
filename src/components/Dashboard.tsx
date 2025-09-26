@@ -8,14 +8,14 @@ const Dashboard: React.FC = () => {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div className="lg:col-span-3">
         <h1 className="text-3xl font-bold text-gasGreen">
-          Natural Gas Market Analysis
+          Анализ рынка природного газа
         </h1>
         <p className="text-gray-400">
-          Comprehensive Framework & Price Prediction
+          Комплексная структура и прогнозирование цен
         </p>
       </div>
 
-      <Card title="Current Price & Performance">
+      <Card title="Текущая цена и производительность">
         <div className="text-4xl font-bold text-gasGreen">
           ${m.price.toFixed(4)}
         </div>
@@ -27,13 +27,14 @@ const Dashboard: React.FC = () => {
           <div>
             Day High: <b>${m.dayHigh}</b>
           </div>
+          <br />
           <div>
             Day Low: <b>${m.dayLow}</b>
           </div>
         </div>
       </Card>
 
-      <Card title="Verified Market Fundamentals">
+      <Card title="Фундаментальные показатели">
         <ul className="text-sm space-y-1 text-gray-200">
           <li>
             Storage Level: <b>{m.fundamentals.storageLevel}</b>
@@ -53,7 +54,7 @@ const Dashboard: React.FC = () => {
         </ul>
       </Card>
 
-      <Card title="Moving Averages">
+      <Card title="Скользящие средние">
         <table className="w-full text-sm">
           <thead className="text-gray-400">
             <tr>
@@ -76,7 +77,7 @@ const Dashboard: React.FC = () => {
         </table>
       </Card>
 
-      <Card title="Detailed Predictions">
+      <Card title="Подробные прогнозы">
         <div className="space-y-3">
           {m.predictions.map((p) => (
             <div key={p.title}>
